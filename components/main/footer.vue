@@ -8,7 +8,7 @@ function onClick(val: string) {
 </script>
 
 <template>
-  <div class="grid sm:flex py-5 mt-5 text-[#263238] dark:text-zinc-300 text-[19px]">
+  <div class="grid sm:flex py-5 mt-5 text-[#263238] dark:text-[#ffffff] text-[19px]">
     <div class="px-6 container max-w-5xl mx-auto">
       <div class="p-2 space-x-4 font-Inter" style="direction: ltr"><div class="inline">© 2024 Adam Rofayel.</div>
 
@@ -26,7 +26,7 @@ function onClick(val: string) {
 
     </div></div>
 
-    <NuxtLink to="about" class="px-8 py-2 pb-8 sm:py-0 sm:pb-0 transform hover:scale-110 duration-500 ease-in-out cursor-pointer"><Icon name="lucide:arrow-up-right" size="24px" class="relative top-1.5"></Icon><div class="p-1 inline"></div>About me</NuxtLink>
+    <NuxtLink to="/about" class="px-8 py-2 pb-8 sm:py-0 sm:pb-0 transform hover:scale-110 duration-500 ease-in-out cursor-pointer"><Icon name="lucide:arrow-up-right" size="24px" class="relative top-1.5"></Icon><div class="p-1 inline"></div>About me</NuxtLink>
 
   </div>
 </template>

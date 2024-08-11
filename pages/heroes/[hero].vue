@@ -13,20 +13,21 @@ const data = computed<Hero>(() => {
     title: articles.value?.title || 'no-title available',
     description: articles.value?.description || 'no-description available',
     tags: articles.value?.tags || [],
+    wikipedia: articles.value?.wikipedia
   }
 })
 
 definePageMeta({
-  layout: 'about'
+  layout: 'default'
 })
 
 </script>
 
 <template>
   <div class="flex justify-center items-center md:p-20 p-10 text-lg leading-loose text-justify">
-    <div class="w-[80%] md:w-[60%] space-y-6">
+    <div class="md:w-[60%] space-y-6 prose-a:underline underline-offset-8">
 
-      <div class="text-2xl">{{ data.title }}</div>
+      <div class="flex justify-between"><div class="text-2xl underline decoration-wavy underline-offset-8">{{ data.title }}</div><a :href= data.wikipedia><Icon name="mdi:wikipedia" size="36px"></Icon></a></div>
 
       <ContentRenderer v-if="articles" :value="articles">
         <template #empty>
@@ -34,7 +35,7 @@ definePageMeta({
         </template>
       </ContentRenderer>
     </div>
-  </div>
+  </div>  
 </template>
 
 <style scoped>

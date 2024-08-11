@@ -6,6 +6,8 @@
     <NuxtLayout>
 
       <NuxtPage />
+
+      <NoiseEffect/>
       
     </NuxtLayout>
 
